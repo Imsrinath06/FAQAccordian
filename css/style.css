@@ -1,0 +1,104 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: 'Poppins',sans-serif;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  text-transform: capitalize;
+}
+
+body {
+  background: #ddd;
+}
+
+.container {
+  margin: 20px auto;
+  max-width: 700px;
+}
+
+.container .heading {
+  text-align: center;
+  font-size: 30px;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.container .accordian-container {
+  padding: 0 20px;
+}
+
+.container .accordian-container .accordian {
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+
+.container .accordian-container .accordian .accordian-heading {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  gap: 10px;
+  background: #fff;
+  border: 2px solid black;
+  padding: 15px 20px;
+}
+
+.container .accordian-container .accordian .accordian-heading h3 {
+  font-size: 20px;
+}
+
+.container .accordian-container .accordian .accordian-heading i {
+  font-size: 25px;
+}
+
+.container .accordian-container .accordian .accordian-content {
+  border: 2px solid black;
+  padding: 15px 20px;
+  background: #fff;
+  border-top: 0;
+  display: none;
+}
+
+.container .accordian-container .accordian.active .accordian-heading {
+  background: crimson;
+  color: #fff;
+}
+
+.container .accordian-container .accordian.active .accordian-heading i {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+  -webkit-transition: .2s .1s transform;
+  transition: .2s .1s transform;
+}
+
+.container .accordian-container .accordian.active .accordian-content {
+  display: block;
+  animation: animate .2s linear reverse;
+  line-height: 2;
+  -webkit-transform-origin: top;
+          transform-origin: top;
+}
+
+@-webkit-keyframes animate {
+  0% {
+    -webkit-transform: scaleY(0);
+            transform: scaleY(0);
+  }
+}
+
+@keyframes animate {
+  0% {
+    -webkit-transform: scaleY(0);
+            transform: scaleY(0);
+  }
+}
+/*# sourceMappingURL=style.css.map */
